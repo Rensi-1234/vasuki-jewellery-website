@@ -1,0 +1,14 @@
+VASUKI asset placement guide
+
+Brand:
+  brand/vasuki-logo.svg (official brand logo)
+Hero:
+  hero/vasuki-hero.jpg (homepage hero image; currently falls back to demo editorial imagery)
+Categories:
+  categories/rings.jpg, earrings.jpg, necklaces.jpg, bangles.jpg, bracelets.jpg,
+  pendants.jpg, nose-pins.jpg, charms.jpg, mangalsutra.jpg, sets.jpg, wedding.jpg,
+  diamond.jpg, gold.jpg, gemstone.jpg, mens.jpg, womens.jpg, kids.jpg
+Products:
+  products/<category>/... (product image files; add transparent cutouts for Try It On)
+
+The current workspace did not contain the user's supplied assets. Do not interpret the demo remote images as inspected or classified user files.

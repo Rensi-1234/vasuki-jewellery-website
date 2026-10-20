@@ -1,0 +1,427 @@
+/* =========================================
+   VASUKI — LUXURY ADMIN LOGIN
+   ========================================= */
+
+.vasuki-admin-login {
+  --vasuki-black: #11100e;
+  --vasuki-cream: #f7f4ed;
+  --vasuki-gold: #b89a58;
+  --vasuki-gold-dark: #94763d;
+  --vasuki-text: #26231e;
+  --vasuki-muted: #858078;
+  --vasuki-border: #ded9cd;
+
+  display: grid;
+  grid-template-columns: 1fr 0.88fr;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--vasuki-cream);
+  color: var(--vasuki-text);
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* LEFT BRAND PANEL */
+
+.vasuki-admin-login .admin-login-brand {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: clamp(32px, 5vw, 76px);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse at 80% 75%,
+      rgba(184, 154, 88, 0.10),
+      transparent 48%
+    ),
+    var(--vasuki-black);
+  color: #fffdf7;
+}
+
+.vasuki-admin-login .admin-login-brand::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 390px;
+  height: 390px;
+  right: -180px;
+  bottom: -180px;
+  border: 1px solid rgba(184, 154, 88, 0.23);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 35px rgba(184, 154, 88, 0.025),
+    0 0 0 70px rgba(184, 154, 88, 0.02);
+}
+
+.vasuki-admin-login .admin-login-wordmark {
+  display: inline-flex;
+  align-self: flex-start;
+  flex-direction: column;
+  gap: 7px;
+  color: #d5bb7b;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 3vw, 43px);
+  font-weight: 500;
+  letter-spacing: 0.19em;
+  line-height: 1;
+}
+
+.vasuki-admin-login .admin-login-wordmark span {
+  color: #f0e8d4;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.31em;
+}
+
+.vasuki-admin-login .admin-login-editorial {
+  max-width: 540px;
+  margin: 70px 0;
+}
+
+.vasuki-admin-login .admin-login-kicker {
+  display: inline-block;
+  color: var(--vasuki-gold-dark);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.23em;
+  line-height: 1.8;
+}
+
+.vasuki-admin-login .admin-login-brand .admin-login-kicker {
+  color: #d0b476;
+}
+
+.vasuki-admin-login .admin-login-editorial h1 {
+  margin: 24px 0;
+  color: #fffdf8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.vasuki-admin-login .admin-login-editorial h1 em {
+  color: #d1b477;
+  font-weight: 400;
+}
+
+.vasuki-admin-login .admin-login-editorial p {
+  max-width: 360px;
+  margin: 0;
+  color: #b9b4a9;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.vasuki-admin-login .admin-login-footer {
+  color: #918a7c;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+
+/* RIGHT LOGIN PANEL */
+
+.vasuki-admin-login .admin-login-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: clamp(28px, 5vw, 72px);
+  background: var(--vasuki-cream);
+}
+
+.vasuki-admin-login .admin-login-form-wrap {
+  width: 100%;
+  max-width: 410px;
+}
+
+.vasuki-admin-login .admin-login-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 30px;
+  border: 1px solid #d9c89f;
+  color: var(--vasuki-gold-dark);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.vasuki-admin-login .admin-login-form-wrap > .admin-login-kicker {
+  color: var(--vasuki-gold-dark);
+}
+
+.vasuki-admin-login .admin-login-form-wrap h2 {
+  margin: 13px 0 12px;
+  color: var(--vasuki-black);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3vw, 39px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.vasuki-admin-login .admin-login-description {
+  margin: 0 0 35px;
+  color: #777168;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.vasuki-admin-login form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.vasuki-admin-login form label {
+  margin: 0 0 9px;
+  color: #39352e;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.vasuki-admin-login form > input,
+.vasuki-admin-login .admin-password-field input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 51px;
+  padding: 0 15px;
+  border: 1px solid var(--vasuki-border);
+  border-radius: 0;
+  outline: none;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--vasuki-text);
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.vasuki-admin-login form > input {
+  margin-bottom: 24px;
+}
+
+.vasuki-admin-login form > input::placeholder,
+.vasuki-admin-login .admin-password-field input::placeholder {
+  color: #a19b91;
+}
+
+.vasuki-admin-login form > input:focus,
+.vasuki-admin-login .admin-password-field:focus-within {
+  border-color: var(--vasuki-gold);
+  box-shadow: 0 0 0 3px rgba(184, 154, 88, 0.11);
+}
+
+.vasuki-admin-login .admin-password-field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 28px;
+  border: 1px solid var(--vasuki-border);
+  background: rgba(255, 255, 255, 0.62);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.vasuki-admin-login .admin-password-field input {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.vasuki-admin-login .admin-password-field button {
+  display: inline-flex;
+  flex: 0 0 48px;
+  align-items: center;
+  justify-content: center;
+  height: 49px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #777168;
+  cursor: pointer;
+}
+
+.vasuki-admin-login .admin-password-field button:hover {
+  color: var(--vasuki-gold-dark);
+}
+
+.vasuki-admin-login .admin-login-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 53px;
+  padding: 14px 20px;
+  border: 1px solid #b49a60;
+  border-radius: 0;
+  background: #b49a60;
+  color: #15130f;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.vasuki-admin-login .admin-login-submit:hover:not(:disabled) {
+  border-color: #987b43;
+  background: #c5ac74;
+}
+
+.vasuki-admin-login .admin-login-submit:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.vasuki-admin-login .admin-login-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.vasuki-admin-login .admin-login-security {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 27px;
+  color: #777168;
+  font-size: 11px;
+}
+
+.vasuki-admin-login .admin-login-security svg {
+  flex-shrink: 0;
+  color: var(--vasuki-gold-dark);
+}
+
+.vasuki-admin-login .admin-login-back {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 26px auto 0;
+  color: #625b50;
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.vasuki-admin-login .admin-login-back:hover {
+  color: var(--vasuki-gold-dark);
+  text-decoration: underline;
+}
+
+/* ACCESSIBILITY */
+
+.vasuki-admin-login button:focus-visible,
+.vasuki-admin-login a:focus-visible {
+  outline: 2px solid var(--vasuki-gold-dark);
+  outline-offset: 4px;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 900px) {
+  .vasuki-admin-login {
+    grid-template-columns: 0.85fr 1fr;
+  }
+
+  .vasuki-admin-login .admin-login-brand {
+    padding: 36px;
+  }
+
+  .vasuki-admin-login .admin-login-panel {
+    padding: 32px;
+  }
+
+  .vasuki-admin-login .admin-login-editorial h1 {
+    font-size: clamp(36px, 5vw, 54px);
+  }
+}
+
+@media (max-width: 650px) {
+  .vasuki-admin-login {
+    grid-template-columns: 1fr;
+  }
+
+  .vasuki-admin-login .admin-login-brand {
+    min-height: auto;
+    padding: 28px 25px 25px;
+  }
+
+  .vasuki-admin-login .admin-login-wordmark {
+    font-size: 30px;
+  }
+
+  .vasuki-admin-login .admin-login-editorial {
+    margin: 48px 0 30px;
+  }
+
+  .vasuki-admin-login .admin-login-editorial h1 {
+    margin: 16px 0;
+    font-size: clamp(40px, 10vw, 55px);
+  }
+
+  .vasuki-admin-login .admin-login-editorial p {
+    font-size: 13px;
+  }
+
+  .vasuki-admin-login .admin-login-footer {
+    font-size: 8px;
+  }
+
+  .vasuki-admin-login .admin-login-panel {
+    padding: 42px 25px 48px;
+  }
+
+  .vasuki-admin-login .admin-login-icon {
+    margin-bottom: 22px;
+  }
+
+  .vasuki-admin-login .admin-login-form-wrap h2 {
+    font-size: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vasuki-admin-login *,
+  .vasuki-admin-login *::before,
+  .vasuki-admin-login *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}.vasuki-admin-login .admin-login-wordmark {
+  display: inline-flex;
+  align-self: flex-start;
+  width: min(100%, 290px);
+  text-decoration: none;
+}
+
+.vasuki-admin-login .admin-login-wordmark img {
+  display: block;
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+}

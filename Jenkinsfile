@@ -7,14 +7,14 @@ pipeline {
         FRONTEND_IMAGE = "${DOCKERHUB_NAMESPACE}/vasuki-frontend"
     }
 
-    stages {
-
-        stage('Checkout') {
-            steps {
-                echo 'Checking out VASUKI source code from GitHub...'
-            }
-        }
-
+   stage('Environment Check') {
+    steps {
+        bat 'node --version'
+        bat 'npm --version'
+        bat 'docker --version'
+        bat 'docker info'
+    }
+}
         stage('Frontend CI') {
             steps {
                 dir('vasuki-frontend') {
